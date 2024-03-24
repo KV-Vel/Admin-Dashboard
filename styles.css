@@ -1,1 +1,182 @@
-/*INSERT RESET CSS*/
+:root {
+    /*Colors palette*/
+    /*
+    #26577E
+    #2F6D9D
+    #3883BC
+    #71AAD6
+    #C0D9EC
+    */
+
+    /*svg
+
+    ----- header -----
+    https://pictogrammers.com/library/mdi/icon/bell-alert-outline/
+    https://www.flaticon.com/free-icon/search_149309?term=search&related_id=149309&origin=search
+    ----- header -----
+
+    ----- main -----
+    https://pictogrammers.com/library/mdi/icon/share-variant-outline/
+    https://pictogrammers.com/library/mdi/icon/bookmark-plus-outline/
+    bookmark -> сделать какое то всплывающее окно при нажатии на эту кнопку?
+    https://pictogrammers.com/library/mdi/icon/chevron-down/
+    ----- main -----
+
+    ----- navbar -----
+    https://pictogrammers.com/library/mdil/icon/home/
+    https://www.flaticon.com/free-icon/user_1828453?term=profile+web+page&page=1&position=16&origin=search&related_id=1828453
+    https://pictogrammers.com/library/mdi/icon/message-outline/
+    https://www.flaticon.com/free-icon/history_2089679?term=history&page=1&position=81&origin=search&related_id=2089679
+    https://www.flaticon.com/free-icon/checklist_9542100?term=task&page=1&position=25&origin=search&related_id=9542100
+    https://www.flaticon.com/free-icon/community_9278608?term=communities&page=1&position=2&origin=search&related_id=9278608
+    https://pictogrammers.com/library/mdi/icon/cogs/
+    https://pictogrammers.com/library/mdi/icon/head-question-outline/
+    https://www.flaticon.com/free-icon/privacy_1629101?term=privacy&page=1&position=1&origin=search&related_id=1629101
+    ----- navbar -----
+    */
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 3fr;
+    grid-template-rows: auto repeat(4, 1fr);
+}
+
+nav {
+    border: 1px solid;
+    grid-column: 1;
+    grid-row: 1 / 6;
+}
+
+header {
+    border: 1px solid red;
+    grid-column: 2 / 6;
+    grid-row: 1 / 2;
+}
+
+main {
+    border: 1px solid purple;
+    grid-column: 2 / 6;
+    grid-row: 2 / 6;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.your-projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.your-projects-container > h3 {
+    grid-row: 1;
+}
+
+.main-container {
+    border: 3px solid gold;
+    border: 3px solid;
+    grid-column: 1;
+    margin: 15px 0 0 15px;
+}
+
+.aside-container {
+    border: 3px solid gold;
+    grid-column: 2;
+    grid-row: 1;
+    margin: 15px 15px 0 0;
+}
+
+.proj-functions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.trending-container {
+    grid-column: 2;
+    grid-row: 2;
+}
+.socials-container {
+    display: flex;
+    align-items: center;
+}
+
+span {
+    display: block;
+}
+
+.upper-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper-header-container-left {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    align-items: center;
+    margin-left: 55px;
+    gap: 10px;
+}
+
+.upper-header-container-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin-right: 55px;
+}
+
+input {
+    height: 10px;
+}
+
+.small-header-logo,
+.small-socials-logo {
+    border: 1px solid;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+.lower-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lower-header-container-left {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    margin-left: 55px;
+}
+
+.welcome-user-text-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+.big-header-logo {
+    border: 1px solid;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px; 
+}
+
+.lower-header-container-right {
+    margin-right: 55px;
+}
+
+.announcments-header {
+    grid-row: 1;
+    grid-column: 2;
+}

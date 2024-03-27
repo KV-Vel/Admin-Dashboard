@@ -1,4 +1,9 @@
 :root {
+
+    --navbar-color: #3883BC;
+    --navbar-hover-color:#71AAD6;
+    --secondary-color: #FD8469;
+
     /*Colors palette*/
     /*
     #26577E
@@ -9,41 +14,26 @@
     */
 
     /*svg
-
-    ----- header -----
-    https://pictogrammers.com/library/mdi/icon/bell-alert-outline/
-    https://www.flaticon.com/free-icon/search_149309?term=search&related_id=149309&origin=search
-    ----- header -----
-
     ----- main -----
     https://pictogrammers.com/library/mdi/icon/share-variant-outline/
     https://pictogrammers.com/library/mdi/icon/bookmark-plus-outline/
     bookmark -> сделать какое то всплывающее окно при нажатии на эту кнопку?
     https://pictogrammers.com/library/mdi/icon/chevron-down/
     ----- main -----
-
-    ----- navbar -----
-    https://pictogrammers.com/library/mdil/icon/home/
-    https://www.flaticon.com/free-icon/user_1828453?term=profile+web+page&page=1&position=16&origin=search&related_id=1828453
-    https://pictogrammers.com/library/mdi/icon/message-outline/
-    https://www.flaticon.com/free-icon/history_2089679?term=history&page=1&position=81&origin=search&related_id=2089679
-    https://www.flaticon.com/free-icon/checklist_9542100?term=task&page=1&position=25&origin=search&related_id=9542100
-    https://www.flaticon.com/free-icon/community_9278608?term=communities&page=1&position=2&origin=search&related_id=9278608
-    https://pictogrammers.com/library/mdi/icon/cogs/
-    https://pictogrammers.com/library/mdi/icon/head-question-outline/
-    https://www.flaticon.com/free-icon/privacy_1629101?term=privacy&page=1&position=1&origin=search&related_id=1629101
-    ----- navbar -----
     */
 }
 
 body {
     height: 100vh;
+    font-family: "Wix Madefor Text", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .container {
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr) 3fr;
+    grid-template-columns: minmax(250px, 1fr) repeat(3, 1fr) 3fr;
     grid-template-rows: auto repeat(4, 1fr);
 }
 
@@ -51,16 +41,82 @@ nav {
     border: 1px solid;
     grid-column: 1;
     grid-row: 1 / 6;
+    background-color: var(--navbar-color);
+}
+
+ul {
+    margin-top: 60px;
+}
+
+.navbar-inner-container {
+    grid-template-columns: 30px 1fr;
+    margin: 0 0 0 1rem;
+}
+
+.logo-container {
+    grid-template-columns: 60px 1fr;
+    font-size: 1.6rem;
+}
+
+.navbar-inner-container,
+.logo-container {
+    display: grid;
+    align-items: center;
+    height: 25px;
+    padding: 1rem;
+    color: #fff;
+}
+
+h2 > span {
+    display: inline;
+    color: var(--secondary-color);
+    border-bottom: 2px solid #fff;
+    position: relative;
+}
+
+h2 > span::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 75px;
+    height: 2px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.navbar-inner-container:hover {
+    background:var(--navbar-hover-color);
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    border-right: 4px solid #C0D9EC;
+    box-shadow: 11px 10px 23px -4px rgba(0,0,0,0.57);
+}
+
+div > li {
+	display: inline-block;
+	vertical-align: baseline;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 1rem;
 }
 
 header {
-    border: 1px solid red;
     grid-column: 2 / 6;
     grid-row: 1 / 2;
+    padding: 0 55px 20px 55px;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.61);
+    z-index: 1;
+}
+
+.upper-header-container {
+    margin: 30px 0 30px 0;
+}
+
+.search-icon:hover {
+    fill:var(--secondary-color);
 }
 
 main {
-    border: 1px solid purple;
+    background-color: #eceaea;
     grid-column: 2 / 6;
     grid-row: 2 / 6;
 
@@ -112,37 +168,49 @@ span {
 }
 
 .upper-header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
 }
 
 .upper-header-container-left {
     display: grid;
     grid-template-columns: 1fr 8fr;
+    justify-content: space-around;
     align-items: center;
-    margin-left: 55px;
-    gap: 10px;
-}
-
-.upper-header-container-right {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    justify-items: center;
-    margin-right: 55px;
+    max-width: 500px;
 }
 
 input {
-    height: 10px;
+    height: 12px;
+    border-radius: 15px;
+    border: none;
+    background-color: #e4e3e3;
+    padding: 10px;
+    font-family: "Wix Madefor Text", sans-serif;;
+}
+
+
+input:focus {
+    outline: 2px dashed var(--secondary-color);
+}
+
+.upper-header-container-right {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-weight: 800;
+}
+
+.upper-header-container-right *{
+    margin-left: 25px;
 }
 
 .small-header-logo,
 .small-socials-logo {
     border: 1px solid;
     border-radius: 50%;
-    height: 20px;
-    width: 20px;
+    height: 50px;
+    width: 50px;
 }
 
 .lower-header-container {
@@ -153,30 +221,63 @@ input {
 
 .lower-header-container-left {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     align-items: center;
-    margin-left: 55px;
+}
+
+.lower-header-container-right {
+    flex-shrink: 0;
 }
 
 .welcome-user-text-container {
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
 }
 
+.welcome-user-text-container > span:nth-child(1) {
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.welcome-user-text-container > span:nth-child(2) {
+    font-size: clamp(16px, 1.4vw, 32px);
+    font-weight: 900;
+}
 
 .big-header-logo {
     border: 1px solid;
     border-radius: 50%;
-    height: 50px;
-    width: 50px; 
+    height: 75px;
+    width: 75px; 
+    margin-right: 25px;
 }
 
-.lower-header-container-right {
-    margin-right: 55px;
+button {
+    display: inline;
+    padding: 12px 15px 12px 15px;
+    background-color: var(--navbar-color);
+    border-radius: 20px;
+    color: #fff;
+    min-width: 100px;
+    margin-left: 25px;
+    margin-left: calc(1vw - 2px);
+    font-weight: 600;
+}
+
+button:hover {
+    background:var(--navbar-hover-color);
+    border-bottom: 4px solid var(--secondary-color);
+    border-top: 4px solid #fff;
 }
 
 .announcments-header {
     grid-row: 1;
     grid-column: 2;
+}
+
+svg,
+button {
+    cursor: pointer;
 }

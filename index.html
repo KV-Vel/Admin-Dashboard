@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset-css.css">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
@@ -12,45 +13,75 @@
         <header>
             <div class="upper-header-container">
                 <div class="upper-header-container-left">
-                    <p class="icon search-icon">srch icon</p>
+                    <svg height="24" width="24" class="icon search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,4C13.09,4 16,6.91 16,10.5C16,12.12 15.41,13.6 14.43,14.73L20.08,20.38L19.37,21.09L13.72,15.44C12.59,16.41 11.11,17 9.5,17C5.91,17 3,14.09 3,10.5C3,6.91 5.91,4 9.5,4M9.5,5C6.46,5 4,7.46 4,10.5C4,13.54 6.46,16 9.5,16C12.54,16 15,13.54 15,10.5C15,7.46 12.54,5 9.5,5Z" /></svg>
                     <input>
                 </div>
                 <div class="upper-header-container-right">
-                    <p class="icon bell-icon">bell icon</p>
-                    <div class="small-header-logo"></div>
+                    <svg height="20" width="20" class="icon bell-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A2 2 0 0 0 10 4A2 2 0 0 0 10 4.29C7.12 5.14 5 7.82 5 11V17L3 19V20H21V19L19 17V11C19 7.82 16.88 5.14 14 4.29A2 2 0 0 0 14 4A2 2 0 0 0 12 2M12 6A5 5 0 0 1 17 11V18H7V11A5 5 0 0 1 12 6M21 7V13H23V7H21M21 15V17H23V15H21M10 21A2 2 0 0 0 12 23A2 2 0 0 0 14 21H10Z" /></svg>
+                    <img class="small-header-logo" src="/sources/man.png"></img>
                     <span>Morgan Oakley</span>
                 </div>
             </div>
             <div class="lower-header-container">
                 <div class="lower-header-container-left">
-                    <div class="big-header-logo"></div>
+                    <img class="big-header-logo" src="/sources/man.png"></img>
                     <div class="welcome-user-text-container">
                         <span>Hi there,</span>
                         <span>Morgan Oakley (@morgan)</span>
                     </div>
                 </div>
                 <div class="lower-header-container-right">
-                    <button>New</button>
-                    <button>Upload</button>
-                    <button>Share</button>
+                    <button type="button">New</button>
+                    <button type="button">Upload</button>
+                    <button type="button">Share</button>
                 </div>
             </div>
         </header>
         <nav>
-            <h4>LOGO</h4>
-            <ul class="main-navigation">
-                <li>Home</li>
-                <li>Profile</li>
-                <li>Message</li>
-                <li>History</li>
-                <li>Task</li>
-                <li>Communities
-                </li>
+            <div class="logo-container">
+                <svg xmlns="http://www.w3.org/2000/svg" height="60" width="60" viewBox="0 0 25 24" fill="white"><path d="M2 5V19H22V5H2M20 12H16V7H20V12M14 10H10V7H14V10M10 12H14V17H10V12M4 7H8V17H4V7M16 17V14H20V17H16Z" /></svg>
+                <h2><span>Dash</span>board</h2>
+            </div>
+            <ul>
+                <div class="navbar-inner-container">
+                    <svg width="20" height="20" fill="white" alt="Home button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>home-variant</title><path d="M12,3L20,9V21H15V14H9V21H4V9L12,3Z" /></svg>
+                    <li>Home</li>
+                </div>
+                <div class="navbar-inner-container">
+                    <svg width="25" height="25" fill="white" alt="Profile button"><path xmlns="http://www.w3.org/2000/svg" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7.07,18.28C7.5,17.38 10.12,16.5 12,16.5C13.88,16.5 16.5,17.38 16.93,18.28C15.57,19.36 13.86,20 12,20C10.14,20 8.43,19.36 7.07,18.28M18.36,16.83C16.93,15.09 13.46,14.5 12,14.5C10.54,14.5 7.07,15.09 5.64,16.83C4.62,15.5 4,13.82 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,13.82 19.38,15.5 18.36,16.83M12,6C10.06,6 8.5,7.56 8.5,9.5C8.5,11.44 10.06,13 12,13C13.94,13 15.5,11.44 15.5,9.5C15.5,7.56 13.94,6 12,6M12,11A1.5,1.5 0 0,1 10.5,9.5A1.5,1.5 0 0,1 12,8A1.5,1.5 0 0,1 13.5,9.5A1.5,1.5 0 0,1 12,11Z"/></svg>
+                    <li>Profile</li>
+                </div>
+                <div class="navbar-inner-container">
+                    <svg width="25" height="20" fill="white" alt="Messages icon button"><path xmlns="http://www.w3.org/2000/svg" d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2M20 16H5.2L4 17.2V4H20V16Z"/></svg>
+                    <li>Message</li>
+                </div>
+                <div class="navbar-inner-container">
+                    <svg width="24" height="18" alt="History icon button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 525"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg>
+                    <li>History</li>
+                </div>
+                <div class="navbar-inner-container">
+                    <svg width="25" height="23" fill="white" alt="Current tasks icon button" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M17 11L21 7L17 3" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 7H9" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 21L3 17L7 13" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 17H3" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <li>Tasks</li>
+                </div>
             </ul>
-            <ul class="secondary-navigation">
-                <li>Setting</li>
-                <li>Support</li>
-                <li>Privacy</li>
+            <ul>
+                <div class="navbar-inner-container">
+                    <svg width="25" height="28" fill="white" alt="Settings icon button"><path xmlns="http://www.w3.org/2000/svg" d="M15.9,18.45C17.25,18.45 18.35,17.35 18.35,16C18.35,14.65 17.25,13.55 15.9,13.55C14.54,13.55 13.45,14.65 13.45,16C13.45,17.35 14.54,18.45 15.9,18.45M21.1,16.68L22.58,17.84C22.71,17.95 22.75,18.13 22.66,18.29L21.26,20.71C21.17,20.86 21,20.92 20.83,20.86L19.09,20.16C18.73,20.44 18.33,20.67 17.91,20.85L17.64,22.7C17.62,22.87 17.47,23 17.3,23H14.5C14.32,23 14.18,22.87 14.15,22.7L13.89,20.85C13.46,20.67 13.07,20.44 12.71,20.16L10.96,20.86C10.81,20.92 10.62,20.86 10.54,20.71L9.14,18.29C9.05,18.13 9.09,17.95 9.22,17.84L10.7,16.68L10.65,16L10.7,15.31L9.22,14.16C9.09,14.05 9.05,13.86 9.14,13.71L10.54,11.29C10.62,11.13 10.81,11.07 10.96,11.13L12.71,11.84C13.07,11.56 13.46,11.32 13.89,11.15L14.15,9.29C14.18,9.13 14.32,9 14.5,9H17.3C17.47,9 17.62,9.13 17.64,9.29L17.91,11.15C18.33,11.32 18.73,11.56 19.09,11.84L20.83,11.13C21,11.07 21.17,11.13 21.26,11.29L22.66,13.71C22.75,13.86 22.71,14.05 22.58,14.16L21.1,15.31L21.15,16L21.1,16.68M6.69,8.07C7.56,8.07 8.26,7.37 8.26,6.5C8.26,5.63 7.56,4.92 6.69,4.92A1.58,1.58 0 0,0 5.11,6.5C5.11,7.37 5.82,8.07 6.69,8.07M10.03,6.94L11,7.68C11.07,7.75 11.09,7.87 11.03,7.97L10.13,9.53C10.08,9.63 9.96,9.67 9.86,9.63L8.74,9.18L8,9.62L7.81,10.81C7.79,10.92 7.7,11 7.59,11H5.79C5.67,11 5.58,10.92 5.56,10.81L5.4,9.62L4.64,9.18L3.5,9.63C3.41,9.67 3.3,9.63 3.24,9.53L2.34,7.97C2.28,7.87 2.31,7.75 2.39,7.68L3.34,6.94L3.31,6.5L3.34,6.06L2.39,5.32C2.31,5.25 2.28,5.13 2.34,5.03L3.24,3.47C3.3,3.37 3.41,3.33 3.5,3.37L4.63,3.82L5.4,3.38L5.56,2.19C5.58,2.08 5.67,2 5.79,2H7.59C7.7,2 7.79,2.08 7.81,2.19L8,3.38L8.74,3.82L9.86,3.37C9.96,3.33 10.08,3.37 10.13,3.47L11.03,5.03C11.09,5.13 11.07,5.25 11,5.32L10.03,6.06L10.06,6.5L10.03,6.94Z"/></svg>
+                    <li>Setting</li>
+                </div>
+                <div class="navbar-inner-container">
+                    <svg width="25" height="28" fill="white" alt="Support icon button"><path xmlns="http://www.w3.org/2000/svg" d="M13 3C16.88 3 20 6.14 20 10C20 12.8 18.37 15.19 16 16.31V21H9V18H8C6.89 18 6 17.11 6 16V13H4.5C4.08 13 3.84 12.5 4.08 12.19L6 9.66C6.19 5.95 9.23 3 13 3M10.32 7.39H12.25C12.26 7.09 12.35 6.86 12.53 6.7C12.71 6.55 12.93 6.47 13.19 6.47C13.5 6.47 13.76 6.57 13.94 6.75C14.12 6.94 14.2 7.2 14.2 7.5C14.2 7.82 14.13 8.09 13.97 8.32C13.83 8.55 13.62 8.75 13.36 8.91C12.85 9.25 12.5 9.55 12.31 9.82C12.11 10.08 12 10.5 12 11H14C14 10.69 14.04 10.44 14.13 10.26C14.22 10.07 14.39 9.9 14.64 9.74C15.09 9.5 15.46 9.21 15.75 8.81C16.04 8.41 16.19 8 16.19 7.5C16.19 6.74 15.92 6.13 15.38 5.68C14.85 5.23 14.12 5 13.19 5C12.32 5 11.62 5.2 11.08 5.59C10.56 6 10.3 6.57 10.31 7.36L10.32 7.39M12 14H14V12H12V14M13 1C8.41 1 4.61 4.42 4.06 8.9L2.5 11L2.47 11L2.45 11.03C1.9 11.79 1.83 12.79 2.26 13.62C2.62 14.31 3.26 14.79 4 14.94V16C4 17.85 5.28 19.42 7 19.87V23H18V17.5C20.5 15.83 22 13.06 22 10C22 5.03 17.96 1 13 1Z"/></svg>
+                    <li>Support</li>
+                </div>
+                <div class="navbar-inner-container">
+                    <svg width="25" height="25" fill=white alt="Privacy info icon button"><path xmlns="http://www.w3.org/2000/svg" d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,3.18L19,6.3V11.22C19,12.92 18.5,14.65 17.65,16.17C16,14.94 13.26,14.5 12,14.5C10.74,14.5 8,14.94 6.35,16.17C5.5,14.65 5,12.92 5,11.22V6.3L12,3.18M12,6A3.5,3.5 0 0,0 8.5,9.5A3.5,3.5 0 0,0 12,13A3.5,3.5 0 0,0 15.5,9.5A3.5,3.5 0 0,0 12,6M12,8A1.5,1.5 0 0,1 13.5,9.5A1.5,1.5 0 0,1 12,11A1.5,1.5 0 0,1 10.5,9.5A1.5,1.5 0 0,1 12,8M12,16.5C13.57,16.5 15.64,17.11 16.53,17.84C15.29,19.38 13.7,20.55 12,21C10.3,20.55 8.71,19.38 7.47,17.84C8.37,17.11 10.43,16.5 12,16.5Z"/></svg>
+                    <li>Privacy</li>
+                </div>
             </ul>
         </nav>
         <main>

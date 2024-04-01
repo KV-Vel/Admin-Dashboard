@@ -1,7 +1,48 @@
-/**TO DO: 
- * 1. Night mode?
- * 2. Сделать hover чтобы он полностью анимационно выделял слово цветом
- * 3. Попробовать сделать возможность раскрывать проект, чтобы он открывался на всю страницу, а остальные опускали вниз? -> Как контролируется сжимания в таком режиме
- * 4. Add current date somewhere
- * 5. Burger menu on resize
- */
+/* Current Date */
+const timeParagraph = document.querySelector('.time-container');
+
+const currentDate = new Date();
+const dateOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    weekday: 'long'
+};
+
+timeParagraph.textContent = currentDate.toLocaleDateString('eng', dateOptions);
+
+/* Burger menu manipulations */
+const burgerMenu = document.querySelector('.burger-menu');
+const navBar = document.querySelector('nav');
+const listItems = document.querySelectorAll('li');
+const navBarIcons = document.querySelectorAll('.navbar-icon');
+const crossBtn = document.querySelector('.cross-btn');
+
+const openBurgerMenuProcess = () => {
+    listItems.forEach(item => item.style.cssText += 'display: block');
+    navBarIcons.forEach(item => item.style.cssText += 'display: none' );
+    navBar.classList.toggle('visible');
+};
+
+const closeBurgerMenuProcess = () => {
+    navBar.classList.toggle('visible');
+    navBarIcons.forEach(item => item.style.cssText += 'display: block' );
+};
+
+burgerMenu.addEventListener('click', openBurgerMenuProcess);
+crossBtn.addEventListener('click', closeBurgerMenuProcess);
+
+window.addEventListener('resize', () => {
+    switch (true) {
+        case window.innerWidth >= 928:
+            listItems.forEach(item => item.style.cssText += 'display: block');
+            break;
+        case window.innerWidth < 928 && window.innerWidth > 765:
+            listItems.forEach(item => item.style.cssText += 'display: none');
+            if (navBar.classList.contains('visible')) {
+                navBar.classList.remove('visible');
+            }
+            navBarIcons.forEach(item => item.style.cssText += 'display: block' );
+            break;
+    }
+});

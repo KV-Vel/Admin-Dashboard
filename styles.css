@@ -1,28 +1,9 @@
 :root {
-
     --navbar-color: #3883BC;
     --navbar-hover-color:#71AAD6;
     --secondary-color: #FD8469;
     --main-background: #E4E3E3;
     --selection-color: #aaaaaac9;
-
-    /*Colors palette*/
-    /*
-    #26577E
-    #2F6D9D
-    #3883BC
-    #71AAD6
-    #C0D9EC
-    */
-
-    /*svg
-    ----- main -----
-    https://pictogrammers.com/library/mdi/icon/share-variant-outline/
-    https://pictogrammers.com/library/mdi/icon/bookmark-plus-outline/
-    bookmark -> сделать какое то всплывающее окно при нажатии на эту кнопку?
-    https://pictogrammers.com/library/mdi/icon/chevron-down/
-    ----- main -----
-    */
 }
 
 *::selection {
@@ -67,7 +48,6 @@ ul {
 .logo-container {
     display: grid;
     align-items: center;
-    height: 25px;
     padding: 1rem;
     color: #fff;
 }
@@ -125,14 +105,14 @@ main {
     grid-row: 2;
 
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 0.6fr;
     grid-template-rows: 1fr;
     gap: 25px;
 }
 
 .your-projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
 }
 
@@ -158,10 +138,7 @@ aside > h4,
 }
 
 aside > h4:hover, 
-.proj-container > h4:hover {
-    text-decoration: underline;
-}
-
+.proj-container > h4:hover,
 .socials:hover {
     text-decoration: underline;
 }
@@ -327,6 +304,8 @@ div > h3 {
 
 .proj-container {
     border-left: 8px solid var(--secondary-color);
+    display: flex;
+    flex-direction: column;
 }
 
 .proj-container,
@@ -344,7 +323,8 @@ svg,
 button,
 .proj-container,
 aside > h4,
-.socials {
+.socials,
+.burger-menu {
     cursor: pointer;
 }
 
@@ -359,10 +339,119 @@ aside > h4,
 }
 
 .proj-container > p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #767676;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+
+    flex-grow: 1;
 }
 
-/*Вместо proj-functions дать флекс более верхнему родителю и сделать так чтобы иконки оставались всегда внизу, иначе если оставить только 1 параграф то иконки поднимаются вверх*/
-/*У каждого контейнера тоже есть небольшая тень*/
+.proj-container, 
+.announcments,
+.trending {
+    box-shadow: 2px 2px 9px -2px rgba(0,0,0,0.63);
+}
+
+.time-container {
+    color: #fff;
+    font-size: clamp(0.8rem, 0.8vw, 1rem);
+    padding: 35px 35px 20px 35px;
+    border-radius: 8px;
+}
+
+.burger-menu {
+    display: none;
+    width: 32px;
+    margin-right: 10px;
+}
+
+.burger-menu-line {
+    height: 5px;
+    width: 30px;
+    background-color: var(--navbar-color);
+    border-radius: 10px;
+}
+
+.burger-menu-line:not(:last-child) {
+    margin-bottom: 3px;
+}
+
+.visible {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    z-index: 2;
+}
+
+.navbar-icon {
+    display: block;
+}
+
+.hide-burger-menu-btn {
+    display: none;
+}
+
+@media (max-width: 928px) {
+    .navbar-inner-container > li,
+    h2 {
+        display:none;
+    }
+    .container {
+        grid-template-columns: 90px repeat(3, 1fr) 3fr;
+    }
+
+    .navbar-inner-container{
+        padding: 1rem 1rem 1rem 0.3rem;
+    }
+
+    .navbar-inner-container > svg {
+        padding: 10px;
+    }
+
+    .time-container {
+        display: none;
+    }
+}
+
+@media (max-width: 765px) {
+
+    nav {
+        display: none;
+    }
+
+    .upper-header-container-left {
+        grid-template-columns: repeat(2, 1fr) 8fr;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .hide-burger-menu-container {
+        display: block;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .hide-burger-menu-container > svg:hover {
+        fill: var(--secondary-color);
+    }
+
+    ul {
+        margin-top: 0;
+    }
+
+    .secondary-list {
+        margin-bottom: 20px;
+    }
+
+    .navbar-inner-container {
+        grid-template-columns: 30px 1fr;
+    }
+
+    .container {
+        grid-template-columns: 3fr;
+    }
+}
